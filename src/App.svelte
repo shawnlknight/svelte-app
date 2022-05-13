@@ -1,10 +1,11 @@
 <script>
 	export let name;
+	export let location;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Welcome!</h1>
+	<p>I'm {name}, a software engineer living in {location}.</p>
 </main>
 
 <style>
@@ -16,10 +17,14 @@
 	}
 
 	h1 {
-		color: #ff3e00;
+		color: #7300ff;
 		text-transform: uppercase;
 		font-size: 4em;
-		font-weight: 100;
+		font-weight: 200;
+	}
+
+	p {
+		font-size: 1.2em;
 	}
 
 	@media (min-width: 640px) {
