@@ -13,7 +13,7 @@
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 400px;
+		max-width: 410px;
 		margin: 0 auto;
 	}
 
