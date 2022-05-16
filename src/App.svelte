@@ -4,12 +4,21 @@
 </script>
 
 <main>
-	<h1>Hello!</h1>
+	<h1 data-shadow='Hello!'>Hello!</h1>
 	<p>I'm {name}.</p>
 	<p>A software engineer living in {location}.</p>
 </main>
 
 <style>
+	@import url(https://fonts.googleapis.com/css?family=Creepster);
+	
+	*, *:before, *:after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		position: relative;
+  }
+
 	main {
 		text-align: center;
 		padding: 1em;
@@ -18,33 +27,45 @@
 	}
 
 	h1 {
-		color: rgb(0 255 255) ;
-		text-transform: uppercase;
-		font-size: 5em;
-		font-weight: 300;
-		/* text-shadow: -0vh 0 #a697ba, 0 0.1vh #a697ba, 0.4vh 0 #a697ba, 0 -0.1vh #a697ba; */
-		text-shadow:
-			0 1px 0px #378ab4,
-			1px 0 0px #5dabcd,
-			1px 2px 1px #378ab4,
-			2px 1px 1px #5dabcd,
-			2px 3px 2px #378ab4,
-			3px 2px 2px #5dabcd,
-			3px 4px 2px #378ab4,
-			4px 3px 3px #5dabcd,
-			4px 5px 3px #378ab4,
-			5px 4px 2px #5dabcd,
-			5px 6px 2px #378ab4,
-			6px 5px 2px #5dabcd,
-			6px 7px 1px #378ab4,
-			7px 6px 1px #5dabcd,
-			7px 8px 0px #378ab4,
-			8px 7px 0px #5dabcd;
+		display: inline-block;
+		color: #67be55;
+		font-family: 'Creepster', serif;
+		font-size: 8em; 
+		letter-spacing: 10px;
+		text-shadow: .03em .03em 0 rgb(24, 23, 23);
+  }
+	
+  h1:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgb(188, 230, 140) 45%,
+        rgb(188, 230, 140) 55%,
+        transparent 0
+			);
+    background-size: .05em .05em;
+		background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
 	}
+
+	@keyframes shad-anim {
+		0% {background-position: 0 0}
+		0% {background-position: 100% -100%}
+  }
 
 	p {
 		color: #fff;
-		font-size: 1.5em;
+		font-size: 1.8em;
+		margin: 1em 0;
 	}
 
 	@media (min-width: 640px) {
