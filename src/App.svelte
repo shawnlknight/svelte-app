@@ -5,12 +5,14 @@
 
 <main>
 	<h1 data-shadow='Hello!'>Hello!</h1>
-	<p>I'm {name}.</p>
-	<p>A software engineer living in {location}.</p>
+	<p>They call him {name}.</p>
+	<p>He punches a keyboard during the day.</p>
+	<p>He can be found in {location}.</p>
 </main>
 
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Creepster);
+	@import url(https://fonts.googleapis.com/css?family=Koulen);
 	
 	*, *:before, *:after {
 		margin: 0;
@@ -30,7 +32,7 @@
 		display: inline-block;
 		color: #67be55;
 		font-family: 'Creepster', serif;
-		font-size: 8em; 
+		font-size: 10em; 
 		letter-spacing: 10px;
 		text-shadow: .03em .03em 0 rgb(24, 23, 23);
   }
@@ -45,8 +47,8 @@
       linear-gradient(
         45deg,
         transparent 45%,
-        rgb(188, 230, 140) 45%,
-        rgb(188, 230, 140) 55%,
+        rgb(250, 195, 30) 45%,
+        rgb(250, 195, 30) 55%,
         transparent 0
 			);
     background-size: .05em .05em;
@@ -63,14 +65,28 @@
   }
 
 	p {
-		color: #fff;
+		color: rgb(250, 195, 30);
 		font-size: 1.8em;
 		margin: 1em 0;
+		font-family: 'Koulen', serif;
 	}
 
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
+		}
+	}
+	@media (max-width: 640px) {
+		main {
+			max-width: none;
+		}
+
+		h1 {
+			font-size: 5em;
+		}
+
+		p {
+			font-size: 1.5em;
 		}
 	}
 </style>
