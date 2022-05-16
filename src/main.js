@@ -5,6 +5,7 @@ const app = new App({
   props: {
     name: 'Shawn',
     location: 'Charleston, SC',
+    occupation: 'Keyboard puncher',
   },
 })
 

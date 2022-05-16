@@ -1,18 +1,27 @@
 <script>
 	export let name;
 	export let location;
+	export let occupation;
 </script>
 
 <main>
 	<h1 data-shadow='Hello!'>Hello!</h1>
-	<p>They call him {name}.</p>
-	<p>He punches a keyboard during the day.</p>
-	<p>He can be found in {location}.</p>
+	<div class="container">
+		<div class="content">
+			<p><span class="underline">Name:</span> {name}</p>
+			<p><span class="underline">Occupation:</span> {occupation}</p>
+			<p><span class="underline">Location:</span> {location}.</p>
+		</div>
+		<div class="divider"></div>
+		<div>
+			<img class="skull-gif" src="skull.gif" alt="skull animation GIF">
+		</div>
+	</div>
 </main>
 
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Creepster);
-	@import url(https://fonts.googleapis.com/css?family=Koulen);
+	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:italc);
 	
 	*, *:before, *:after {
 		margin: 0;
@@ -31,8 +40,8 @@
 	h1 {
 		display: inline-block;
 		color: #67be55;
-		font-family: 'Creepster', serif;
-		font-size: 10em; 
+		font-family: 'Creepster', sans-serif;
+		font-size: 12em; 
 		letter-spacing: 10px;
 		text-shadow: .03em .03em 0 rgb(24, 23, 23);
   }
@@ -68,7 +77,35 @@
 		color: rgb(250, 195, 30);
 		font-size: 1.8em;
 		margin: 1em 0;
-		font-family: 'Koulen', serif;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-style: "italic";
+	}
+
+	.container {
+		max-width: 410px;
+		margin: 0 auto;
+	}
+
+	.content {
+		padding-top: 2em;
+		text-align: left;
+	}
+
+	.underline {
+		border-bottom: 2px dotted #67be55;
+	}
+
+	.divider {
+		text-align: center;
+		width: 300px;
+		padding: 5em;
+		margin: 0 auto;
+		border-bottom: 1px solid #67be55;
+	}
+
+	.skull-gif {
+		margin-top: 2em;
+		width: 120px;
 	}
 
 	@media (min-width: 640px) {
