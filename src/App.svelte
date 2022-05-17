@@ -1,33 +1,28 @@
 <script>
+	import Banner from './components/Banner.svelte'
+	import Icon from './components/Icon.svelte';
+	import Content from './components/Content.svelte';
+
 	export let name;
 	export let location;
 	export let occupation;
 </script>
 
 <main>
-	<h1 data-shadow='Hello!'>Hello!</h1>
+	<Banner/>
 	<div class="container">
-		<div class="content">
-			<p><span class="underline">Name:</span> {name}</p>
-			<p><span class="underline">Occupation:</span> {occupation}</p>
-			<p><span class="underline">Location:</span> {location}.</p>
-		</div>
+		<Content name={name} location={location} occupation={occupation} />
 		<div class="divider"></div>
-		<div>
-			<img class="skull-gif" src="skull.gif" alt="skull animation GIF">
-		</div>
+		<Icon/>
 	</div>
 </main>
 
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Creepster);
 	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:italc);
-	
-	*, *:before, *:after {
-		margin: 0;
-		padding: 0;
+
+  *, *:before, *:after {
 		box-sizing: border-box;
-		position: relative;
   }
 
 	main {
@@ -37,62 +32,9 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		display: inline-block;
-		color: #67be55;
-		font-family: 'Creepster', sans-serif;
-		font-size: 12em; 
-		letter-spacing: 10px;
-		text-shadow: .03em .03em 0 rgb(24, 23, 23);
-  }
-	
-  h1:after {
-    content: attr(data-shadow);
-    position: absolute;
-    top: .06em; left: .06em;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-      linear-gradient(
-        45deg,
-        transparent 45%,
-        rgb(250, 195, 30) 45%,
-        rgb(250, 195, 30) 55%,
-        transparent 0
-			);
-    background-size: .05em .05em;
-		background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  
-    animation: shad-anim 15s linear infinite;
-	}
-
-	@keyframes shad-anim {
-		0% {background-position: 0 0}
-		0% {background-position: 100% -100%}
-  }
-
-	p {
-		color: rgb(250, 195, 30);
-		font-size: 1.8em;
-		margin: 1em 0;
-		font-family: 'Roboto Condensed', sans-serif;
-		font-style: "italic";
-	}
-
 	.container {
 		max-width: 410px;
 		margin: 0 auto;
-	}
-
-	.content {
-		padding-top: 2em;
-		text-align: left;
-	}
-
-	.underline {
-		border-bottom: 2px dotted #67be55;
 	}
 
 	.divider {
@@ -103,27 +45,15 @@
 		border-bottom: 1px solid #67be55;
 	}
 
-	.skull-gif {
-		margin-top: 2em;
-		width: 120px;
-	}
-
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
 		}
 	}
+
 	@media (max-width: 640px) {
 		main {
 			max-width: none;
-		}
-
-		h1 {
-			font-size: 5em;
-		}
-
-		p {
-			font-size: 1.5em;
 		}
 	}
 </style>
