@@ -12,7 +12,6 @@
 	<Banner/>
 	<div class="container">
 		<Content name={name} location={location} occupation={occupation} />
-		<div class="divider"></div>
 		<Icon/>
 	</div>
 </main>
@@ -35,14 +34,6 @@
 	.container {
 		max-width: 410px;
 		margin: 0 auto;
-	}
-
-	.divider {
-		text-align: center;
-		width: 300px;
-		padding: 5em;
-		margin: 0 auto;
-		border-bottom: 1px solid #67be55;
 	}
 
 	@media (min-width: 640px) {

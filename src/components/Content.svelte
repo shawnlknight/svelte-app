@@ -15,13 +15,13 @@
   p {
 		color: rgb(250, 195, 30);
 		font-size: 1.8em;
-		margin: 1em 0;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-style: "italic";
 	}
 
   .content {
-		padding-top: 2em;
+		padding: 1em;
+		margin-bottom: 4em;
 		text-align: left;
 	}
 

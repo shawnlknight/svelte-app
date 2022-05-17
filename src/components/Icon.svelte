@@ -1,10 +1,7 @@
-<div>
-  <img class="skull-gif" src="skull.gif" alt="skull animation GIF">
-</div>
+<img class="skull-gif" src="skull.gif" alt="skull animation GIF">
 
 <style>
   .skull-gif {
-		margin-top: 2em;
-		width: 120px;
+		width: 150px;
 	}
 </style>
