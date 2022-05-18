@@ -20,7 +20,7 @@
 	}
 
   .content {
-		margin-bottom: 4em;
+		margin: 5em 0;
 		text-align: left;
 	}
 
