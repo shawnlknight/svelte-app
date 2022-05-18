@@ -11,16 +11,15 @@
   <p><span class="underline">Location:</span> {location}</p>
 </div>
 
-<style>
+<style>	
   p {
 		color: rgb(250, 195, 30);
 		font-size: 1.8em;
 		font-family: 'Roboto Condensed', sans-serif;
-		font-style: "italic";
+		font-style: italic;
 	}
 
   .content {
-		padding: 1em;
 		margin-bottom: 4em;
 		text-align: left;
 	}

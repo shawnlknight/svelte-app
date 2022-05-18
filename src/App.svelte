@@ -18,7 +18,7 @@
 
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Creepster);
-	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:italc);
+	@import url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&display=swap);
 
   *, *:before, *:after {
 		box-sizing: border-box;
