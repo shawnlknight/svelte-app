@@ -1,14 +1,10 @@
 <script>
 	export let name;
-	export let location;
-	export let occupation;
 </script>
 
 
 <div class="content">
   <p><span class="underline">Name:</span> {name}</p>
-  <p><span class="underline">Occupation:</span> {occupation}</p>
-  <p><span class="underline">Location:</span> {location}</p>
 </div>
 
 <style>	
